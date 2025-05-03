@@ -43,7 +43,9 @@ const SiparisVer = ({ toppings, dough, size }) => {
             type="submit"
             color="warning"
             className="siparis-ver-btn"
-            disabled={!size || !dough || toppings.length < 4}>
+            disabled={!size || !dough || toppings.length < 4}
+            style={{ fontWeight: 'bold' }}
+            >
             SİPARİŞ VER
           </Button>
         </div>
