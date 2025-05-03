@@ -1,0 +1,10 @@
+.pizza-options-container {
+    width: 40vw; 
+}
+
+.boyut-hamur {
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    flex-direction: row;
+}

@@ -1,31 +1,17 @@
-header {
-    width: 100vw;
+.header-siparis {
     height: 20vh;
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    flex-direction: column;
+    background-image: url('images/iteration-1-images/logo.svg');
     background-color: #CE2829;
-
-    position: fixed; 
-    top: 0;           
-    left: 0;
-    z-index: 1000;    
-}
-
-header img {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
 }
 
 .headerNav {
     display: flex;
     justify-content: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    align-items: flex-end;
+    flex-direction: row;
+    height: 20vh;
 }
 
 .nav-item {

@@ -1,39 +1,27 @@
 import React, { useState } from "react";
-import PizzaOptions from "./PizzaOptions";
+import { Button } from "reactstrap";
 
 
-const SiparisVer = () => {
+const SiparisVer = ({ toppings, note, setNote, dough, size }) => {
   const [adet, setAdet] = useState(1);
-  const [size, setSize] = useState('');
-  const [dough, setDough] = useState('');
-  const [toppings, setToppings] = useState([]);
-  const [note, setNote] = useState('');
+
 
   const secimUcreti = toppings.length * 5
   const bazFiyat = 85.5;
-  
   const toplamFiyat = (bazFiyat + secimUcreti) * adet;
 
   const adetArttir = () => setAdet((prev) => prev + 1);
   const adetAzalt = () => setAdet((prev) => (prev > 1 ? prev - 1 : 1));
 
+
+
   return (
     <div className="siparis-page">
-
-      <PizzaOptions
-        size={size}
-        setSize={setSize}
-        dough={dough}
-        setDough={setDough}
-        toppings={toppings}
-        setToppings={setToppings}
-      />
-
       <div className="siparis-container">
         <div className="adet-kontrol">
-          <button className="adet-btn" onClick={adetAzalt}>-</button>
+          <Button className="adet-btn" onClick={adetAzalt} color="warning">-</Button>
           <span className="adet-sayi">{adet}</span>
-          <button className="adet-btn" onClick={adetArttir}>+</button>
+          <Button className="adet-btn" onClick={adetArttir} color="warning">+</Button>
         </div>
 
         <input
@@ -56,7 +44,13 @@ const SiparisVer = () => {
               <span>{toplamFiyat.toFixed(2)}₺</span>
             </div>
           </div>
-          <button className="siparis-ver-btn">SİPARİŞ VER</button>
+          <Button 
+              type="submit" 
+              color="warning"
+              className="siparis-ver-btn" 
+              disabled={!size || !dough || toppings.length < 4}>
+              SİPARİŞ VER
+          </Button>
         </div>
       </div>
     </div>

@@ -11,13 +11,14 @@ const Header = () => {
     }
 
   return (
-    <header>
+    <header className="header-siparis">
         <section className="header-container">
-            <img src='images/iteration-1-images/logo.svg' alt="logo" />
             <nav className="headerNav">
-                 <span className="nav-item">Anasayfa</span>
-                 <span className="nav-item">Seçenekler</span>
-                 <span className="nav-item active">Sipariş Oluştur</span>
+                 <button className="nav-item">Anasayfa </button>
+                 -
+                 <button className="nav-item">Seçenekler</button>
+                 -
+                 <button className="nav-item active">Sipariş Oluştur</button>
             </nav>
         </section> 
     </header>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './PizzaOptions.css';
+import { Form, FormGroup, Input, Label } from 'reactstrap';
 
 const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings }) => {
   const sizes = ['Küçük', 'Orta', 'Büyük'];
@@ -19,56 +20,57 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings })
   };
 
   return (
-    <div className="pizza-options-container">
-      <div className='option-group'>
-        <h3 className="option-title">Boyut Seç <span className="required">*</span></h3>
-        <div className="size-options">
-          {sizes.map((s, i) => (
-            <label key={i}>
-              <input
-                type="radio"
-                name="size"
-                value={s}
-                checked={size === s}
-                onChange={() => setSize(s)}
-              />
-              <span className='label-text'>{s}</span>
-            </label>
-          ))}
-        </div>
-      </div>
+    <Form className="pizza-options-container">
+      <div className='boyut-hamur'>
+        <FormGroup className='option-group'>
+          <h3 className="option-title">Boyut Seç <span className="required">*</span></h3>
+          <FormGroup className="size-options">
+            {sizes.map((s, i) => (
+              <Label key={i}>
+                <Input
+                  type="radio"
+                  name="size"
+                  value={s}
+                  checked={size === s}
+                  onChange={() => setSize(s)}
+                />
+                <span className='label-text'>{s}</span>
+              </Label>
+            ))}
+          </FormGroup>
+        </FormGroup>
 
-      <div className='option-group'>
-        <h3 className="option-title">Hamur Seç <span className="required">*</span></h3>
-        <select
-          className="dough-select"
-          value={dough}
-          onChange={(e) => setDough(e.target.value)}
-        >
-          <option value="">Hamur Kalınlığı</option>
-          {doughOptions.map((d, i) => (
-            <option key={i} value={d}>{d}</option>
-          ))}
-        </select>
+        <FormGroup className='option-group'>
+          <h3 className="option-title">Hamur Seç <span className="required">*</span></h3>
+          <select
+            className="dough-select"
+            value={dough}
+            onChange={(e) => setDough(e.target.value)}
+          >
+            <option value="">Hamur Kalınlığı</option>
+            {doughOptions.map((d, i) => (
+              <option key={i} value={d}>{d}</option>
+            ))}
+          </select>
+        </FormGroup>
       </div>
-
-      <div className='option-group'>
+      <FormGroup className='option-group'>
         <h3 className="option-title">Ek Malzemeler</h3>
-        <p className="topping-note">En fazla 10 malzeme seçebilirsiniz. 5₺</p>
-        <div className="toppings-grid">
+        <p className="topping-note">En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</p>
+        <FormGroup className="toppings-grid">
           {extraToppings.map((topping, index) => (
-            <label key={index} className='checkbox-label'>
-              <input
+            <Label key={topping} className='checkbox-label'>
+              <Input
                 type="checkbox"
                 checked={toppings.includes(topping)}
                 onChange={() => handleToppingChange(topping)}
               />
               <span className="label-text">{topping}</span>
-            </label>
+            </Label>
           ))}
-        </div>
-      </div>
-    </div>
+        </FormGroup>
+      </FormGroup>
+    </Form>
   );
 };
 
