@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './siparisNotu.css';
 
 const SiparisNotu = () => {
   const [isim, setIsim] = useState('');
@@ -6,7 +7,7 @@ const SiparisNotu = () => {
 
   return (
     <div className="siparis-notu-container">
-      <label htmlFor="isim">İsim (en az 3 karakter)</label>
+      <label htmlFor="isim">İsim <span style={{ color: '#5f5f5f' }}>(en az 3 karakter)</span></label>
       <input
         type="text"
         id="isim"

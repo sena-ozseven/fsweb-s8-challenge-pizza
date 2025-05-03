@@ -1,0 +1,46 @@
+.siparis-page {
+    width: 35vw; 
+    margin-bottom: 12rem;
+}
+
+.ayirici-cizgi {
+    border: none;
+    border-top: 1px solid #b1aaaa;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+.adet-sayi {
+    border-top: 1px solid #dfd9d9;
+    padding: 1rem;
+    border-bottom: 1px solid #dfd9d9;
+}
+
+.adet-btn {
+    padding: 1rem
+}
+
+.siparis-toplami-yazisi {
+    font-size: 1.2rem;
+}
+
+.siparis-container {
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+}
+
+.siparis-ozet {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5em;
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.siparis-ver-btn {
+    width: 19vw;
+}

@@ -1,10 +1,12 @@
  .pizza-info {
     text-align: left;
-    width: 40vw; 
+    width: 35vw; 
   }
   
   .pizza-name {
-    font-size: 1.4rem;
+    padding-top: 2.8vh;
+    padding-bottom: 2.8vh;
+    font-size: 1.3rem;
     font-weight: bold; 
   }
   
@@ -30,4 +32,5 @@
     display: flex;
     gap: 3rem;
     font-size: 1rem;
+    color: #5F5F5F;
   }

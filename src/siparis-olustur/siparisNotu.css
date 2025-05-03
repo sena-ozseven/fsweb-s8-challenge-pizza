@@ -1,0 +1,26 @@
+.siparis-notu-container { 
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.siparis-notu-container label {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #292929;
+}
+
+.siparis-notu-container input[type="text"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+

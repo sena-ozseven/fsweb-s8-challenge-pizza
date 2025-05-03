@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css'
 
 const Header = () => {
-
-    const [activeClass, setActiveClass] = useState("");
-    function handleChange (event) {
-        //buradaki kod onClick eventi tetiklendiğinde active classını 
-        // span içine ekleyecek.
-        // Onclick false ise çıkaracak.
-    }
-
   return (
     <header className="header-siparis">
         <section className="header-container">

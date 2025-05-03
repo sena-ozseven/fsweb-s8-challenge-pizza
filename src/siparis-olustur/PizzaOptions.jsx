@@ -7,8 +7,8 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings })
   const doughOptions = ['İnce', 'Normal', 'Kalın'];
   const extraToppings = [
     'Pepperoni', 'Domates', 'Biber', 'Sosis', 'Mısır', 'Sucuk',
-    'Kanada Jambonu', 'Ananas', 'Tavuk Izgara', 'Jalepeno',
-    'Kabak', 'Soğan', 'Sarımsak'
+    'Jambon', 'Salam', 'Ananas', 'Tavuk Izgara',
+    'Jalepeno', 'Kabak', 'Soğan', 'Sarımsak'
   ];
 
   const handleToppingChange = (topping) => {
@@ -34,41 +34,46 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings })
                   checked={size === s}
                   onChange={() => setSize(s)}
                 />
-                <span className='label-text'>{s}</span>
+                <span className='size-options-text'>{s}</span>
               </Label>
             ))}
           </FormGroup>
         </FormGroup>
 
         <FormGroup className='option-group'>
-          <h3 className="option-title">Hamur Seç <span className="required">*</span></h3>
-          <select
-            className="dough-select"
-            value={dough}
-            onChange={(e) => setDough(e.target.value)}
-          >
-            <option value="">Hamur Kalınlığı</option>
-            {doughOptions.map((d, i) => (
-              <option key={i} value={d}>{d}</option>
-            ))}
-          </select>
+          <section className='hamur-sec-container'>
+            <h3 className="option-title">Hamur Seç <span className="required">*</span></h3>
+            <select
+              className="dough-select"
+              value={dough}
+              onChange={(e) => setDough(e.target.value)}
+            >
+              <option value="">Hamur Kalınlığı</option>
+              {doughOptions.map((d, i) => (
+                <option key={i} value={d}>{d}</option>
+              ))}
+            </select>
+          </section>
         </FormGroup>
       </div>
+
       <FormGroup className='option-group'>
-        <h3 className="option-title">Ek Malzemeler</h3>
-        <p className="topping-note">En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</p>
-        <FormGroup className="toppings-grid">
-          {extraToppings.map((topping, index) => (
-            <Label key={topping} className='checkbox-label'>
-              <Input
-                type="checkbox"
-                checked={toppings.includes(topping)}
-                onChange={() => handleToppingChange(topping)}
-              />
-              <span className="label-text">{topping}</span>
-            </Label>
-          ))}
-        </FormGroup>
+         <section className='ek-malzemeler-container'>
+           <h3 className="option-title">Ek Malzemeler</h3>
+            <p className="topping-note">En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</p>
+            <FormGroup className="toppings-grid">
+              {extraToppings.map((topping, index) => (
+                <Label key={topping} className='checkbox-label'>
+                  <Input
+                    type="checkbox"
+                    checked={toppings.includes(topping)}
+                    onChange={() => handleToppingChange(topping)}
+                  />
+                  <span className="label-text">{topping}</span>
+                </Label>
+              ))}
+            </FormGroup>
+         </section>
       </FormGroup>
     </Form>
   );
