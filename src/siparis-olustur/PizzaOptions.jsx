@@ -1,8 +1,12 @@
-import React from 'react';
 import './PizzaOptions.css';
 import { Form, FormGroup, Input, Label } from 'reactstrap';
+import axios from 'axios';
+import React from 'react';
+import SiparisVer from './SiparisVer';
+import SiparisNotu from './SiparisNotu';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
-const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings }) => {
+const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, note, setNote }) => {
   const sizes = ['Küçük', 'Orta', 'Büyük'];
   const doughOptions = ['İnce', 'Normal', 'Kalın'];
   const extraToppings = [
@@ -19,8 +23,33 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings })
     }
   };
 
+  const history = useHistory();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const postform = {size, dough, toppings};
+    axios
+      .post(
+        'https://reqres.in/api/pizza',
+        postform,
+        {
+          headers: {
+            "x-api-key": "reqres-free-v1"
+          }
+        }
+      )     
+      .then((response) => {
+        console.log("Gönderilen veri:", postform);
+        history.push({
+          pathname: "/confirmation",
+          state: postform
+        });
+      })
+      .catch((error) => {console.error(error)})
+  }
+ 
   return (
-    <Form className="pizza-options-container">
+    <Form className="pizza-options-container" onSubmit={handleSubmit}>
       <div className='boyut-hamur'>
         <FormGroup className='option-group'>
           <h3 className="option-title">Boyut Seç <span className="required">*</span></h3>
@@ -75,6 +104,17 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings })
             </FormGroup>
          </section>
       </FormGroup>
+      <SiparisNotu 
+        note={note}
+        setNote={setNote}            
+      />
+      <SiparisVer 
+        toppings={toppings}
+        note={note}
+        setNote={setNote}
+        dough={dough}
+        size={size}
+      />
     </Form>
   );
 };
