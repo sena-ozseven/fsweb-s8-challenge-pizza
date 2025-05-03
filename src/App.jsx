@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import workintech from '/workintech.svg'
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
+import SiparisOlustur from './siparis-olustur/Siparis-Olustur';
 
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function App() { 
 
   return (
-    <>
-      <Header />
-    </>
-  )
+    <div className='app-container'>
+      <SiparisOlustur />
+    </div>
+  );
 }
 
 export default App

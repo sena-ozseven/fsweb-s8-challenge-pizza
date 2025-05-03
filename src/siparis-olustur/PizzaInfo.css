@@ -1,0 +1,33 @@
+.pizza-info {
+    text-align: left; 
+  }
+  
+  .pizza-name {
+    font-size: 1.4rem;
+    font-weight: bold; 
+  }
+  
+  .price-and-rating {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+    font-size: 1rem;
+  }
+  
+  .pizza-price {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  
+  .pizza-description {
+    font-size: 1rem;
+    color: #5F5F5F;
+    line-height: 1.6;
+  }
+
+  .pizza-rating {
+    display: flex;
+    gap: 3rem;
+    font-size: 1rem;
+  }
+  
