@@ -1,9 +1,9 @@
 .header-siparis {
-    height: 20vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('images/iteration-1-images/logo.svg');
-    background-color: #CE2829;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('images/iteration-1-images/logo.svg');
+  background-color: #CE2829;
 }
 
 
@@ -16,11 +16,11 @@
 }
 
 .headerNav {
-  position: absolute; 
+  position: absolute;
   width: 80vw;
   padding: 1.5vh;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   color: #FAF7F2;
 }
 
@@ -35,8 +35,19 @@
 .nav-item:hover {
   color: white;
 }
+
 .nav-item.active {
   color: white;
   font-weight: 600;
 }
-  
+
+@media (max-width: 500px) {
+  .header-siparis {
+    background-size: 17em;
+    padding-right: 10em;
+  }
+
+  .nav-item {
+    font-size: 0.9em;
+  }
+}

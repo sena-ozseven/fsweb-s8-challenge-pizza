@@ -1,4 +1,4 @@
-.siparis-notu-container { 
+.siparis-notu-container {
     display: flex;
     width: 35vw;
     justify-content: space-between;
@@ -24,3 +24,20 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 500px) {
+    .siparis-notu-container {
+        width: 80vw;
+        margin: 1rem auto;
+        gap: 0.75rem;
+        padding-top: 1rem;
+    }
+
+    .siparis-notu-container label {
+        font-size: 1.1rem;
+    }
+
+    .siparis-notu-container input[type="text"] {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.9rem;
+    }
+}

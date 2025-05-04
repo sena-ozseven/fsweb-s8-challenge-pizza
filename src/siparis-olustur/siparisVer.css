@@ -1,5 +1,5 @@
 .siparis-page {
-    width: 35vw; 
+    width: 35vw;
     margin-bottom: 12rem;
 }
 
@@ -8,8 +8,8 @@
     border-top: 1px solid #b1aaaa;
     margin-bottom: 2rem;
     width: 100%;
-  }
-  
+}
+
 .adet-sayi {
     border-top: 1px solid #dfd9d9;
     padding: 1rem;
@@ -36,8 +36,8 @@
 
 .siparis-fiyat .satir:last-child {
     font-weight: bold;
-    color: #d32f2f; 
-  }
+    color: #d32f2f;
+}
 
 .siparis-container {
     display: flex;
@@ -59,4 +59,51 @@
 .siparis-ver-btn {
     width: 20vw;
     height: 6vh;
+}
+
+@media (max-width: 500px) {
+    
+    .siparis-page {
+        width: 80vw;
+        margin: 2rem auto 6rem auto;
+    }
+
+    .siparis-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .adet-kontrol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .adet-btn {
+        padding: 0.75rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .adet-sayi {
+        padding: 0.75rem 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .siparis-ver-btn {
+        width: 40vw;
+        margin-top: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .ayirici-cizgi {
+        width: 80vw;
+        margin-top: 2em;
+    }
+
+    .siparis-ozet {
+        width: 80vw;
+    }
 }

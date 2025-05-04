@@ -1,36 +1,67 @@
  .pizza-info {
-    text-align: left;
-    width: 35vw; 
-  }
-  
-  .pizza-name {
-    padding-top: 2.8vh;
-    padding-bottom: 2.8vh;
-    font-size: 1.3rem;
-    font-weight: bold; 
-  }
-  
-  .price-and-rating {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.8rem 0;
-    font-size: 1rem;
-  }
-  
-  .pizza-price {
-    font-weight: bold;
-    font-size: 1.8rem;
-  }
-  
-  .pizza-description {
-    font-size: 1rem;
-    color: #5F5F5F;
-    line-height: 1.6;
-  }
+   text-align: left;
+   width: 35vw;
+ }
 
-  .pizza-rating {
-    display: flex;
-    gap: 3rem;
-    font-size: 1rem;
-    color: #5F5F5F;
-  }
+ .pizza-name {
+   padding-top: 2.8vh;
+   padding-bottom: 2.8vh;
+   font-size: 1.3rem;
+   font-weight: bold;
+ }
+
+ .price-and-rating {
+   display: flex;
+   justify-content: space-between;
+   margin: 0.8rem 0;
+   font-size: 1rem;
+ }
+
+ .pizza-price {
+   font-weight: bold;
+   font-size: 1.8rem;
+ }
+
+ .pizza-description {
+   font-size: 1rem;
+   color: #5F5F5F;
+   line-height: 1.6;
+ }
+
+ .pizza-rating {
+   display: flex;
+   gap: 3rem;
+   font-size: 1rem;
+   color: #5F5F5F;
+ }
+
+ @media (max-width: 500px) {
+   .pizza-info {
+     width: 80vw;
+     padding-right: 3em;
+   }
+
+   .pizza-name {
+     text-align: left;
+   }
+
+   .price-and-rating {
+     flex-direction: row;
+     align-items: center;
+     gap: 0.3em;
+   }
+
+   .pizza-price {
+     font-size: 1.6rem;
+   }
+
+   .pizza-rating {
+     gap: 0.5rem;
+     font-size: 0.9rem;
+   }
+
+   .pizza-description {
+     font-size: 0.95rem;
+     text-align: justify;
+   }
+ }
