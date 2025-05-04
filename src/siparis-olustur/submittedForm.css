@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.submitted-container {
+    background-color: #CE2829;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+  
+.teknolojik-logo {
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+  
+.confirmation-messages .on-the-way {
+    color: #FDC913;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-family: 'Satisfy', sans-serif;
+}
+  
+.received-message {
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0;
+}
+  
+hr {
+    width: 50%;
+    border: 0.5px solid white;
+    margin: 24px auto;
+}
+  
+.pizza-name {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
