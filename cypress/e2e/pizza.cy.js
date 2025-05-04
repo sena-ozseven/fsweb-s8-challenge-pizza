@@ -1,13 +1,22 @@
-describe('Pizza Order', () => {
+describe('Pizza Input', () => {
 
   beforeEach(() => {
-    cy.visit('http://localhost:5173/');
-    cy.contains('Sipariş Ver').click();
+    cy.visit('http://localhost:5173/siparisform');
   });
 
-  it('fills the form and submits successfully', () => {
+  it('inputa metin giren test', () => {
+    cy.get('[data-cy="note-input"]').type('Zil çalışmıyor lütfen arayın.').should("have.value", 'Zil çalışmıyor lütfen arayın.');  
+  });
 
-    cy.get('[data-cy="isim-input"]').type('Sena');
+  it("dört malzeme seçiyor", () => {
+    cy.get('[data-cy="topping-pepperoni"]').check().should("be.checked");
+    cy.get('[data-cy="topping-mantar"]').check().should("be.checked");
+    cy.get('[data-cy="topping-zeytin"]').check().should("be.checked");
+    cy.get('[data-cy="topping-mozarella"]').check().should("be.checked");
+  })
+
+  it(("form gönderiliyor"), () => {
+    
     cy.get('[data-cy="size-orta"]').click();
 
 
@@ -19,7 +28,7 @@ describe('Pizza Order', () => {
     cy.get('[data-cy="topping-zeytin"]').check();
     cy.get('[data-cy="topping-mozarella"]').check();
 
-
+    cy.get('[data-cy="isim-input"]').type('Sena');
     cy.get('[data-cy="note-input"]').type('Zil çalışmıyor lütfen arayın.');
 
 
@@ -28,5 +37,5 @@ describe('Pizza Order', () => {
 
     cy.url().should('include', '/confirmation');
     cy.contains('SİPARİŞ ALINDI').should('be.visible');
-  });
-});
+  })
+});  
