@@ -1,0 +1,44 @@
+.secenekler {
+    background-color: #faf7f2;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+  
+.secenekler nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.secenekler nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.secenekler img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+  
+.secenekler a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+  
+.secenekler a:hover {
+    color: #e91e63; 
+}
+  

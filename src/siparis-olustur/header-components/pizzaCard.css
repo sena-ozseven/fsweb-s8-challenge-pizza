@@ -1,0 +1,48 @@
+.pizzalar {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 70px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pizzalar div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 300px;
+    text-align: center;
+}
+
+.pizzalar img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.pizza-name {
+    margin: 10px 0;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.rating {
+    color: #CE2829;
+    font-weight: bold;
+}
+
+.reviews {
+    color: gray;
+}
+
+.price {
+    color: #292929;
+    font-weight: bold;
+}

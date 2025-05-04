@@ -1,0 +1,96 @@
+footer {
+    background-color: #292929;
+}
+
+.ana-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 120px;
+    padding: 50px;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid #5f5f5f;
+}
+
+#footer-logo {
+    height: 100px;
+}
+
+.iletisim img {
+    margin-top: 30px;
+}
+
+.footer-firstcolumn {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#hot-menu-header {
+    padding: 80px 30px;
+}
+
+.instagram {
+    width: 400px;
+    padding: 80px;
+}
+
+#insta-header {
+    padding: 10px;
+}
+
+.insta-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.insta-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.copyright-x {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 200;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+
+@media (max-width: 768px) {
+    .ana-footer {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 20px;
+        padding: 30px;
+    }
+
+    .iletisim,
+    .hot-menu,
+    .instagram {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .insta-images img {
+        width: 30%;
+    }
+
+    .copyright-x {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

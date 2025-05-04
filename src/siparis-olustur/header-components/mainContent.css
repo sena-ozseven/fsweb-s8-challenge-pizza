@@ -1,0 +1,118 @@
+.main {
+    background-color: #FAF7F2;
+}
+
+.uclu-blok {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-block {
+    background-image: url('/assets/iteration-2/cta/kart-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px 250px 100px 30px;
+    margin: 70px 10px;
+}
+
+.left-header {
+    color: #FAF7F2;
+    font-size: 70px;
+    font-family: "Quattrocento";
+    margin: 0 auto;
+}
+
+.left-p {
+    color: #FAF7F2;
+    font-family: "Barlow";
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.siparis-ver {
+    background-color: #FAF7F2;
+    border: none;
+    border-radius: 50px;
+    color: #CE2829;
+    font-family: "Barlow";
+    font-weight: 600;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 150px 100px 0;
+}
+
+.right-first {
+    background-image: url('/assets/iteration-2/cta/kart-2.png');
+    padding: 5px 300px 50px 30px;
+    margin-top: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    font-family: "Barlow";
+    color: #FAF7F2;
+    background-position: center;
+    border-radius: 20px;
+}
+
+#right-first-header {
+    font-size: 20px;
+    font-family: "Barlow";
+    color: #FAF7F2;
+}
+
+.right-second {
+    background-image: url('/assets/iteration-2/cta/kart-3.png');
+    padding: 5px 100px 50px 30px;
+    margin: 10px 0 70px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+#right-second-header {
+    font-size: 20px;
+    font-family: "Barlow";
+    color: #292929;
+}
+
+.ara-yazi {
+    text-align: center;
+}
+
+#en-cok {
+    color: #CE2829;
+    font-family: Satisfy;
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0;
+}
+
+#aciktiran-kodlar {
+    font-family: Barlow;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.second-menu {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 40px;
+    justify-content: center;
+}
+
+.second-menu div {
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
