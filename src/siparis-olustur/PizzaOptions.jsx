@@ -27,7 +27,7 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const postform = {size, dough, toppings};
+    const postform = { size, dough, toppings };
     axios
       .post(
         'https://reqres.in/api/pizza',
@@ -37,7 +37,7 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
             "x-api-key": "reqres-free-v1"
           }
         }
-      )     
+      )
       .then((response) => {
         console.log("Gönderilen veri:", postform);
         history.push({
@@ -45,9 +45,9 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
           state: postform
         });
       })
-      .catch((error) => {console.error(error)})
+      .catch((error) => { console.error(error) })
   }
- 
+
   return (
     <Form className="pizza-options-container" onSubmit={handleSubmit}>
       <div className='boyut-hamur'>
@@ -62,6 +62,7 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
                   value={s}
                   checked={size === s}
                   onChange={() => setSize(s)}
+                  data-cy={`size-${s.toLowerCase()}`}
                 />
                 <span className='size-options-text'>{s}</span>
               </Label>
@@ -74,6 +75,7 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
             <h3 className="option-title">Hamur Seç <span className="required">*</span></h3>
             <select
               className="dough-select"
+              data-cy="dough-select"
               value={dough}
               onChange={(e) => setDough(e.target.value)}
             >
@@ -87,28 +89,29 @@ const PizzaOptions = ({ size, setSize, dough, setDough, toppings, setToppings, n
       </div>
 
       <FormGroup className='option-group'>
-         <section className='ek-malzemeler-container'>
-           <h3 className="option-title">Ek Malzemeler</h3>
-            <p className="topping-note">En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</p>
-            <FormGroup className="toppings-grid">
-              {extraToppings.map((topping, index) => (
-                <Label key={topping} className='checkbox-label'>
-                  <Input
-                    type="checkbox"
-                    checked={toppings.includes(topping)}
-                    onChange={() => handleToppingChange(topping)}
-                  />
-                  <span className="label-text">{topping}</span>
-                </Label>
-              ))}
-            </FormGroup>
-         </section>
+        <section className='ek-malzemeler-container'>
+          <h3 className="option-title">Ek Malzemeler</h3>
+          <p className="topping-note">En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</p>
+          <FormGroup className="toppings-grid">
+            {extraToppings.map((topping, index) => (
+              <Label key={topping} className='checkbox-label'>
+                <Input
+                  type="checkbox"
+                  data-cy={`topping-${topping.toLowerCase().replace(/\s/g, '-')}`}
+                  checked={toppings.includes(topping)}
+                  onChange={() => handleToppingChange(topping)}
+                />
+                <span className="label-text">{topping}</span>
+              </Label>
+            ))}
+          </FormGroup>
+        </section>
       </FormGroup>
-      <SiparisNotu 
+      <SiparisNotu
         note={note}
-        setNote={setNote}            
+        setNote={setNote}
       />
-      <SiparisVer 
+      <SiparisVer
         toppings={toppings}
         note={note}
         setNote={setNote}

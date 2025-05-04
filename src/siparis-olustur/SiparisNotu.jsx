@@ -11,6 +11,7 @@ const SiparisNotu = () => {
       <input
         type="text"
         id="isim"
+        data-cy="isim-input"
         name="isim"
         value={isim}
         onChange={(e) => setIsim(e.target.value)}
@@ -24,6 +25,7 @@ const SiparisNotu = () => {
         type="text"
         id="siparisNotu"
         name="siparisNotu"
+        data-cy="note-input"
         value={note}
         onChange={(e) => setNote(e.target.value)}
         placeholder="Siparişe eklemek istediğiniz bir not var mı?"
